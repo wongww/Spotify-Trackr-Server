@@ -163,10 +163,10 @@ app.get('/callback', function(req, res) {
         //Set cookie to indicate user has logged in successfully.
         res.cookie('loggedIn', 'true');
 
-        res.redirect('http://localhost:3000/history');
+        res.redirect('http://spotifytrackr.s3-website-us-west-1.amazonaws.com/history');
       } else {
         res.cookie('loggedIn', 'false');
-        res.redirect('http://localhost:3000/' +
+        res.redirect('http://spotifytrackr.s3-website-us-west-1.amazonaws.com/' +
           querystring.stringify({
             error: 'invalid_token'
           }));
@@ -203,7 +203,7 @@ app.get('/callback', function(req, res) {
 });
 app.get('/logout', function(req,res){
   res.cookie('loggedIn','false');
-  res.redirect('http://localhost:3000');
+  res.redirect('http://spotifytrackr.s3-website-us-west-1.amazonaws.com/');
   console.log("Logged out of TrackR");
   client.close();
 });
