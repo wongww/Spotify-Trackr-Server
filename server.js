@@ -12,7 +12,7 @@ const result = dotenv.config();
 //Secret keys make sure not to publsih
 var client_id = process.env.REACT_APP_CLIENT_KEY; // Your client id
 var client_secret = process.env.REACT_APP_API_KEY; // Your secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+var redirect_uri = 'https://spotifytrackr.herokuapp.com/callback'; // Your redirect uri
 var uri =  process.env.REACT_APP_DB_KEY;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 var userAccess ='';
