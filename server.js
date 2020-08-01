@@ -253,9 +253,7 @@ function refreshAccess(){
   });
 
 }
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
+
 const port = process.env.PORT || 8888;
 console.log("Listening on port: " + port);
 app.listen(port);
