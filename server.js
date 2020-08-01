@@ -61,6 +61,7 @@ var app = express();
 
 
 //Still really confused about this line 
+//app.use(express.static)
 app.use(cors()).use(cookieParser());
 
 app.get('/login', function(req, res) {
